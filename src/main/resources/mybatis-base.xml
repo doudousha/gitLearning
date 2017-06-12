@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<configuration>
+
+    <properties resource="db.properties" />
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+    </settings>
+    
+    <typeAliases>
+        <!--<typeAlias type="com.pojo.Player" alias="player" />-->
+  
+        <package name="com.pojo" />
+    </typeAliases>
+
+
+    <environments default="development">
+        <environment id="development">
+            <!-- 事务使用的是jdbc的方式 -->
+            <transactionManager type="JDBC" />
+            <!-- 连接池 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${football.driver}" />
+                <property name="url" value="${football.url}" />
+                <property name="username" value="${football.username}" />
+                <property name="password" value="${football.password}" />
+            </dataSource>
+        </environment>
+    </environments>
+
+
+    <mappers>
+        <mapper resource="mapper/playerMapper.xml" />
+        <mapper class="com.dao.PlayerAnnotationDao"/>
+        <mapper resource="mapper/clubMapper.xml" />
+    </mappers>
+
+
+</configuration>
