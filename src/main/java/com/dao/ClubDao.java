@@ -5,7 +5,10 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-
+/**
+ * Created by Administrator on 2017/6/7.
+ * 这是第二次修改
+ */
 public interface  ClubDao {
 
     List<Club> getAll();
