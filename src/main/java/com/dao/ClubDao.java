@@ -17,4 +17,6 @@ public interface  ClubDao {
 
     /* 修复了bug */
 
+    /*bug 分支修改  */
+
 }
