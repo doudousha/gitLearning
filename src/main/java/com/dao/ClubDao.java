@@ -16,5 +16,7 @@ public interface  ClubDao {
     List<Club> getByIds(@Param("ids") List<Integer> ids) ;
 
 
+
     /* 8882222222 */
+
 }
