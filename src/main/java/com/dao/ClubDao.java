@@ -14,4 +14,7 @@ public interface  ClubDao {
     void updateRank(@Param("id") int id , @Param("rank") int rank) ;
 
     List<Club> getByIds(@Param("ids") List<Integer> ids) ;
+
+
+    /* 888 */
 }
